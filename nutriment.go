@@ -4,6 +4,7 @@
 package openfoodfacts
 
 import (
+	"reflect"
 	"strconv"
 )
 
@@ -12,6 +13,12 @@ type StrFloat float64
 func (s *StrFloat) UnmarshalJSON(data []byte) error {
 	if string(data) == "0" {
 		*s = 0
+		return nil
+	}
+
+	xt := reflect.TypeOf(data).Kind()
+	if xt == reflect.String {
+		*s = StrFloat(xt)
 		return nil
 	}
 
