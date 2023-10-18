@@ -16,7 +16,7 @@ func (s *StrFloat) UnmarshalJSON(data []byte) error {
 		return nil
 	}
 
-	xt := reflect.TypeOf(data[1 : len(data)-1]).Kind()
+	xt := reflect.TypeOf(string(data[1 : len(data)-1])).Kind()
 	if xt == reflect.String {
 		*s = 0
 		return nil
