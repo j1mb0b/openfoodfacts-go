@@ -4,34 +4,27 @@
 package openfoodfacts
 
 import (
-	"reflect"
 	"strconv"
 )
 
 type StrFloat float64
 
 func (s *StrFloat) UnmarshalJSON(data []byte) error {
-	if string(data) == "0" {
+	stringValue := string(data)
+
+	if stringValue == "0" {
 		*s = 0
 		return nil
 	}
 
-	xt := reflect.TypeOf(string(data[1 : len(data)-1])).Kind()
-	if xt == reflect.String {
-		*s = 0
-		return nil
+	if len(stringValue) > 0 && stringValue[0] == '"' {
+		stringValue = stringValue[1:]
+	}
+	if len(stringValue) > 0 && stringValue[len(stringValue)-1] == '"' {
+		stringValue = stringValue[:len(stringValue)-1]
 	}
 
-	// if len(data) < 2 || data[0] != '"' || data[len(data)-1] != '"' {
-	// 	return fmt.Errorf("malformed data")
-	// }
-
-	// v, err := strconv.ParseFloat(string(data[1:len(data)-1]), 64)
-	// if err != nil {
-	// 	return err
-	// }
-
-	v, err := strconv.ParseFloat(string(data), 64)
+	v, err := strconv.ParseFloat(stringValue, 64)
 	if err != nil {
 		return err
 	}
