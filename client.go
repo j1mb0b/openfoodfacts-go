@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-const defaultUserAgent = "OpenFoodFacts - Go - v0.0 - https://github.com/openfoodfacts/openfoodfacts-go"
+const defaultUserAgent = "OpenFoodFacts - Go - v0.0 - https://github.com/j1mb0b/openfoodfacts-go"
 
 var (
 	// ErrNoProduct is an error returned by Client.Product when the product could not be
@@ -48,16 +48,16 @@ type Client struct {
 // The username and password should be set to your OpenFoodFacts credentials if you need WRITE access, else provide
 // them both as empty strings for anonymous access.
 //
-// Sandbox mode
+// # Sandbox mode
 //
 // If you are testing your application, you should use the test server in order to use the sandbox environment instead
 // of the live servers. See the Sandbox() method for more detail and an example.
 //
-// Timeout
+// # Timeout
 //
 // By default the HTTP client doesn't sets a timeout. See the Timeout(time.Duration) method for more detail.
 //
-// UserAgent
+// # UserAgent
 //
 // Please set a UserAgent HTTP Header with the name of the app/service querying, the version, system and a URL if
 // you have one, so that you are not blocked by mistake

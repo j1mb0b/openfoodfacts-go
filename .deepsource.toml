@@ -5,7 +5,7 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_root = "github.com/openfoodfacts/openfoodfacts-go"
+  import_root = "github.com/j1mb0b/openfoodfacts-go"
 
 [[transformers]]
 name = "gofmt"

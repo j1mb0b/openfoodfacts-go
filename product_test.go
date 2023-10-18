@@ -9,7 +9,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/openfoodfacts/openfoodfacts-go"
+	"github.com/j1mb0b/openfoodfacts-go"
 )
 
 func TestProduct_Unmarshalling(t *testing.T) {

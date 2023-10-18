@@ -12,7 +12,7 @@ This library is copyright © 2019-2021 OpenFoodFacts. All rights reserved. Use o
 
 ## Documentation
 
-[Package documentation](https://godoc.org/github.com/openfoodfacts/openfoodfacts-go)
+[Package documentation](https://godoc.org/github.com/j1mb0b/openfoodfacts-go)
 
 [OpenFoodFacts API details](http://en.wiki.openfoodfacts.org/Project:API)
 
@@ -26,7 +26,7 @@ This is a very simple example how to use the library in you go program.
 package main
 
 import (
-	"github.com/openfoodfacts/openfoodfacts-go"
+	"github.com/j1mb0b/openfoodfacts-go"
 )
 
 func main() {
