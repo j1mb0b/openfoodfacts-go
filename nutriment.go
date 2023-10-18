@@ -4,7 +4,6 @@
 package openfoodfacts
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -16,9 +15,9 @@ func (s *StrFloat) UnmarshalJSON(data []byte) error {
 		return nil
 	}
 
-	if len(data) < 2 || data[0] != '"' || data[len(data)-1] != '"' {
-		return fmt.Errorf("malformed data")
-	}
+	// if len(data) < 2 || data[0] != '"' || data[len(data)-1] != '"' {
+	// 	return fmt.Errorf("malformed data")
+	// }
 
 	v, err := strconv.ParseFloat(string(data[1:len(data)-1]), 64)
 	if err != nil {
