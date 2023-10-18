@@ -12,7 +12,7 @@ type StrFloat float64
 
 func (s *StrFloat) UnmarshalJSON(data []byte) error {
 	if string(data) == "0" {
-		*s = -1
+		*s = 0
 		return nil
 	}
 
