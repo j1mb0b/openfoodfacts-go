@@ -19,10 +19,16 @@ func (s *StrFloat) UnmarshalJSON(data []byte) error {
 	// 	return fmt.Errorf("malformed data")
 	// }
 
-	v, err := strconv.ParseFloat(string(data[1:len(data)-1]), 64)
+	// v, err := strconv.ParseFloat(string(data[1:len(data)-1]), 64)
+	// if err != nil {
+	// 	return err
+	// }
+
+	v, err := strconv.ParseFloat(string(data), 64)
 	if err != nil {
 		return err
 	}
+
 	*s = StrFloat(v)
 	return nil
 }
