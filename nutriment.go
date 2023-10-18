@@ -71,7 +71,7 @@ type Nutriment struct {
 	CarbohydratesUnit       string  `json:"carbohydrates_unit,omitempty"`
 	CarbohydratesValue      float64 `json:"carbohydrates_value,omitempty"`
 	Carbohydrates100G       float64 `json:"carbohydrates_100g,omitempty"`
-	Carbohydrates           float64 `json:"carbohydrates,omitempty"`
+	Carbohydrates           string  `json:"carbohydrates,omitempty"`
 	CarbohydratesServing    float64 `json:"carbohydrates_serving,omitempty"`
 	AlcoholValue            float64 `json:"alcohol_value,omitempty"`
 	AlcoholServing          float64 `json:"alcohol_serving,omitempty"`
