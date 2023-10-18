@@ -11,12 +11,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"time"
 )
 
-const defaultUserAgent = "OpenFoodFacts - Go - v0.0 - https://github.com/j1mb0b/openfoodfacts-go"
+const defaultUserAgent = "OpenFoodFacts - Go - v0.0 - https://github.com/openfoodfacts/openfoodfacts-go"
 
 var (
 	// ErrNoProduct is an error returned by Client.Product when the product could not be
@@ -87,7 +87,7 @@ func (h *Client) Product(code string) (*Product, error) {
 	}
 	defer resp.Body.Close()
 
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 
 	if err != nil {
 		return nil, err

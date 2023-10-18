@@ -77,7 +77,7 @@ type Product struct {
 	EcoscoreTags                                []string       `json:"ecoscore_tags,omitempty"`
 	ExpirationDate                              string         `json:"expiration_date,omitempty"`
 	FruitsVegetablesNuts100GEstimate            json.Number    `json:"fruits-vegetables-nuts_100g_estimate,omitempty"`
-	Ingredients                                 []Ingredient   `json:"ingredients,omitempty"`
+	Ingredients                                 []Ingredient   `json:"ingredients"`
 	IngredientsDebug                            []interface{}  `json:"ingredients_debug,omitempty"`
 	IngredientsFromOrThatMayBeFromPalmOilNumber int            `json:"ingredients_from_or_that_may_be_from_palm_oil_n,omitempty"`
 	IngredientsFromPalmOilNumber                int            `json:"ingredients_from_palm_oil_n,omitempty"`
@@ -113,9 +113,9 @@ type Product struct {
 	MaxImgId                                    string         `json:"max_imgid,omitempty"`
 	NewAdditivesNumber                          int            `json:"new_additives_n,omitempty"`
 	NoNutritionData                             interface{}    `json:"no_nutrition_data,omitempty"`
-	NutrientLevels                              NutrientLevel  `json:"nutrient_levels,omitempty"`
+	NutrientLevels                              NutrientLevel  `json:"nutrient_levels"`
 	NutrientLevelsTags                          []string       `json:"nutrient_levels_tags,omitempty"`
-	Nutriments                                  Nutriment      `json:"nutriments,omitempty"`
+	Nutriments                                  Nutriment      `json:"nutriments"`
 	NutritionDataPer                            string         `json:"nutrition_data_per,omitempty"`
 	NutritionGradeFr                            string         `json:"nutrition_grade_fr,omitempty"`
 	NutritionGrades                             string         `json:"nutrition_grades,omitempty"`
