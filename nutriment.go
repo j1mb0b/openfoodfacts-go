@@ -12,11 +12,6 @@ type StrFloat float64
 func (s *StrFloat) UnmarshalJSON(data []byte) error {
 	stringValue := string(data)
 
-	if stringValue == "0" {
-		*s = 0
-		return nil
-	}
-
 	if len(stringValue) > 0 && stringValue[0] == '"' {
 		stringValue = stringValue[1:]
 	}
