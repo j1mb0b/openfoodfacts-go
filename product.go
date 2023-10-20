@@ -110,7 +110,6 @@ type Product struct {
 	Locale                                      string         `json:"lc,omitempty"`
 	ManufacturingPlaces                         string         `json:"manufacturing_places,omitempty"`
 	ManufacturingPlacesTags                     []string       `json:"manufacturing_places_tags,omitempty"`
-	MaxImgId                                    string         `json:"max_imgid,omitempty"`
 	NewAdditivesNumber                          int            `json:"new_additives_n,omitempty"`
 	NoNutritionData                             interface{}    `json:"no_nutrition_data,omitempty"`
 	NutrientLevels                              NutrientLevel  `json:"nutrient_levels"`
